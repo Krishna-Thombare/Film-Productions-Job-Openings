@@ -35,7 +35,7 @@ JOBS = [
 
 @app.route('/')
 def home():
-    return render_template('index.html', jobs=JOBS, company_name='FINISHER')
+    return render_template('index.html', jobs=JOBS)
 
 # To store jobs information in json format
 @app.route('/api/jobs')       #api route
