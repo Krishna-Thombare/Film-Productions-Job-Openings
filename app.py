@@ -1,7 +1,8 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
 
+# List to store jobs information
 JOBS = [
     {
         'id': 1,
@@ -35,6 +36,11 @@ JOBS = [
 @app.route('/')
 def home():
     return render_template('index.html', jobs=JOBS, company_name='FINISHER')
+
+# To store jobs information in json format
+@app.route('/api/jobs')       #api route
+def list_jobs():
+    return jsonify(JOBS)
 
 
 
