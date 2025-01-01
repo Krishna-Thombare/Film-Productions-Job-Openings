@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import os
 
 # To hide DB info
-load_dotenv(dotenv_path='secret.env')
+load_dotenv(dotenv_path='.env')
 db_connection_string = os.environ['DB_CONNECTION_STR']
 
 engine = create_engine(db_connection_string)
