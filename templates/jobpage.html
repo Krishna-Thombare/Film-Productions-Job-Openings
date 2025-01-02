@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> {{job.title}} - Finisher Productions </title>
+    {% include 'bootstrap.html' %}
+    
+</head>
+<body>
+    {% include 'nav.html' %}
+    <br>
+    {% include 'banner.html' %}
+
+    <div class="container">    
+        <h1 
+            class="text-center mt-3 mb-4"> 
+            Join Us 
+        </h1>
+
+        <h3 class="mb-1" >{{job.title}} </h3>
+        <p class="lead mt-0"> {{job.location}} </p>
+        <h4> Responsibilties </h4>
+        <ul>
+            {% for line in job.responsibilites.split("\n") %}
+                <li> {{line}} </li>
+            {% endfor %}
+        </ul>
+        <h4> Requirements </h4>
+        <ul>
+            {% for line in job.requirements.split("\n") %}
+                <li> {{line}} </li>
+            {% endfor %}
+        </ul>
+        <h4> Payment (Per Project) </h4>
+        <p> {{job.currency}} {{job.salary}} (Negotiable based on experience and project scope) </p>
+
+    {% include 'footer.html' %}   3: 40: 45
+</body>
+</html>
