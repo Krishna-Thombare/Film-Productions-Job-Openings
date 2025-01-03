@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <title> Application Submitted </title>
     {% include 'bootstrap.html' %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
 </head>
 <body>
@@ -29,6 +28,9 @@
 
         <b> Contact No. </b>
         <div class="mb-2"> {{application['contact_no']}} </div>
+
+        <b> Address </b>
+        <div class="mb-2"> {{application['address']}} </div>
         
         <b> Portfolio/Showreel Link </b>
         <div class="mb-2"> {{application['portfolio_link']}} </div>
@@ -37,7 +39,8 @@
         <div class="mb-2"> {{application['work_experience']}} </div>   
 
         </div>
-
+    
+    {% include 'contactus.html' %}
     {% include 'footer.html' %}
 </body>
 </html>

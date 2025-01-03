@@ -1,6 +1,6 @@
 <h4> Application Form </h4>
 
-    <form action="/job/{{job['id']}}/apply" method="post">
+    <form action="/job/{{job['id']}}/view" method="post">
         <div class="mb-3">
             <label> Full Name </label>
             <br>
@@ -10,13 +10,19 @@
         <div class="mb-3">
             <label> Email </label>
             <br>
-            <input type="email" required name="email" placeholder="e.g. xyz@gmail.com">
+            <input type="email" required name="email" placeholder="e.g. name@xyz.com">
         </div>
 
         <div class="mb-3">
             <label> Contact No. </label>
             <br>
             <input type="text" name="contact_no">
+        </div>
+
+        <div class="mb-3">
+            <label> Address </label>
+            <br>
+            <textarea name="address" placeholder="e.g. City, State, Country"></textarea>
         </div>
 
         <div class="mb-3">

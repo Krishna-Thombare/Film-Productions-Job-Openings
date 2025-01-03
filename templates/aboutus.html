@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <title> About Us </title>
+    {% include 'bootstrap.html' %}
+
+  </head>
+
+  <body>
+    
+    {% include 'nav.html' %}
+    <br>
+
+    <style>
+        
+        body {
+            overflow-x: hidden;
+        }
+        
+        .banner-container {
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            width: 100vw;
+            background-color: black;
+            margin-top: -20px; /* To remove gap between heading and logo */
+        }
+    
+        #banner {
+            display: block;
+            height: 197px;
+            width: 100%; /* Changed from 300% */
+            object-fit: cover;
+            margin: 0 auto;
+            max-width: 100vw; /* Changed to viewport width */
+        }
+    </style>
+    
+    <div class="banner-container">
+        <img class="img-fluid" id="banner" src="/static/banner2.jpeg" alt="Finisher Productions">
+    </div>
+
+    <div class="container">
+      <h1 class="text-center mt-2 mb-3"> About us </h1>
+
+      <p class="text-center mt-0 mb-4">
+        Finisher Productions is a dynamic and innovative film production company
+        dedicated to bringing exceptional storytelling to life. We specialize in
+        creating captivating narratives that resonate with audiences worldwide,
+        blending creativity, technology, and artistry to deliver unforgettable
+        visual experiences. We are committed to producing high-quality content
+        across a diverse range of genres, including feature films,
+        documentaries, commercials, and digital media. With a team of skilled
+        professionals, we pride ourselves on our collaborative approach,
+        ensuring every project is executed with precision and attention to
+        detail. Our core values of creativity, integrity, and excellence drive
+        everything we do, from pre-production to post-production. We believe in
+        the power of visual storytelling to inspire, educate, and entertain, and
+        we work tirelessly to bring fresh, unique perspectives to the screen. At
+        Finisher Productions, we understand that each project is a journey, and
+        we treat every client with the utmost respect and care, ensuring that
+        their vision is brought to life with the highest standards of quality
+        and professionalism. Whether you are an emerging filmmaker or an
+        established brand, we are here to help you craft a story that leaves a
+        lasting impact.
+      </p>
+    </div>
+    {% include 'contactus.html' %}
+    {% include 'footer.html' %}
+  </body>
+</html>

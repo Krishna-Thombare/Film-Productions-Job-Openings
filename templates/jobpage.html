@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <title> {{job.title}} - Finisher Productions </title>
     {% include 'bootstrap.html' %}
     
 </head>
+
 <body>
     {% include 'nav.html' %}
     <br>
@@ -13,10 +15,12 @@
     <div class="container">    
         <h1 
             class="text-center mt-3 mb-4"> 
-            Join Us 
+            Job Description 
         </h1>
 
-        <h3 class="mb-1" >{{job.title}} </h3>
+        <h3 class="mb-1">
+            {{job.title}} <span style="font-size: 0.7em; color: #212121;"> (Project Hire) </span>
+        </h3>
         <p class="lead mt-0"> {{job.location}} </p>
         <h4> Responsibilties </h4>
         <ul>
@@ -30,11 +34,14 @@
                 <li> {{line}} </li>
             {% endfor %}
         </ul>
-        <h4> Payment (Per Project) </h4>
-        <p> {{job.currency}} {{job.salary}} (Negotiable based on experience and project scope) </p>
+        <h4> 
+            Payment <span style="font-size: 0.7em; color: #212121;"> (Per Project) </span>
+        </h4>
+        <p> {{job.currency}} {{job.payment}} </p>
         <hr>
         {% include 'application_form.html' %}
     </div>
+    {% include 'contactus.html' %}
     {% include 'footer.html' %}
 </body>
 </html>
