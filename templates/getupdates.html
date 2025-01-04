@@ -6,42 +6,7 @@
   </head>
 
   <body>
-    {% include 'nav.html' %}
-
-    <style>
-      body {
-        overflow-x: hidden;
-      }
-
-      .banner-container {
-        position: relative;
-        left: 50%;
-        right: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
-        width: 100vw;
-        background-color: black;
-        margin-top: -20px; /* To remove gap between heading and logo */
-      }
-
-      #banner {
-        display: block;
-        height: 197px;
-        width: 100%; /* Changed from 300% */
-        object-fit: cover;
-        margin: 0 auto;
-        max-width: 100vw; /* Changed to viewport width */
-      }
-    </style>
-
-    <div class="banner-container">
-      <img
-        class="img-fluid"
-        id="banner"
-        src="/static/banner2.jpeg"
-        alt="Finisher Productions"
-      />
-    </div>
+    {% include 'nav.html' %} {% include 'banner2.html' %}
 
     <div class="container">
       <h1 class="text-center mt-2 mb-3">Get Updates</h1>
@@ -56,41 +21,38 @@
         </p>
       </div>
 
-      <form action="#" method="post">
+      <form action="/getupdates" method="post">
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label"
-            >First Name</label
-          >
+          <label for="first_name" class="form-label"> First Name </label>
           <input
             type="text"
             required
             class="form-control"
-            id="exampleFormControlInput1"
+            id="first_name"
+            name="first_name"
             placeholder="Your Name"
           />
         </div>
 
         <div class="mb-3">
-          <label for="exampleFormControlInput2" class="form-label"
-            >Last Name</label
-          >
+          <label for="last_name" class="form-label"> Last Name </label>
           <input
-            type="name"
+            type="text"
             class="form-control"
-            id="exampleFormControlInput2"
+            id="last_name"
+            name="last_name"
             placeholder="Surname"
           />
         </div>
 
         <div class="mb-3">
-          <label for="exampleFormControlInput3" class="form-label"
-            >Email address</label
-          >
+          <label for="email" class="form-label"> Email Address </label>
           <input
             type="email"
             required
             class="form-control"
-            id="exampleFormControlInput3"
+            id="email"
+            name="email"
             placeholder="name@example.com"
           />
         </div>
@@ -98,9 +60,8 @@
         <button type="submit" class="btn btn-primary btn-sm">Submit</button>
       </form>
     </div>
-    <br>
+    <br />
 
-    {% include 'contactus.html' %}
-    {% include 'footer.html' %}
+    {% include 'contactus.html' %} {% include 'footer.html' %}
   </body>
 </html>

@@ -8,9 +8,9 @@
 </head>
 
 <body>
+    
     {% include 'nav.html' %}
-    <br>
-    {% include 'banner.html' %}
+    {% include 'banner2.html' %}
 
     <div class="container">    
         <h1 
@@ -38,10 +38,16 @@
             Payment <span style="font-size: 0.7em; color: #212121;"> (Per Project) </span>
         </h4>
         <p> {{job.currency}} {{job.payment}} </p>
+
+        <div>
+            <a class="btn btn-primary btn-sm" href="/job/{{job['id']}}/apply"> Apply 
+            </a>
+        </div>
         <hr>
-        {% include 'application_form.html' %}
-    </div>
+        
     {% include 'contactus.html' %}
-    {% include 'footer.html' %}
+    </div>
+    
+{% include 'footer.html' %}
 </body>
 </html>

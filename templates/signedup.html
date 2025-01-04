@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title> signedup </title>
+    {% include 'bootstrap.html' %}
+
+</head>
+
+<body>
+
+    {% include 'nav.html' %}
+    {% include 'banner2.html' %}
+
+    <div class="container">
+        <h1 class="text-center mt-2 mb-3"> You Are Signed Up! </h1>
+
+        <div>
+            <p class="text-center">
+                Thank you for signing up! <br>
+                You will now receive the latest updates, news, and insights from Finisher
+                Productions directly in your inbox. <br>
+                Stay connected for exciting announcements, behind-the-scenes content, and exclusive opportunities. <br>
+                We are thrilled to have you on this creative journey with us!
+            </p>
+        </div>
+
+        {% include 'returnhome.html' %}
+
+        {% include 'contactus.html' %}
+
+    </div>
+
+{% include 'footer.html' %}
+</body>
+
+</html>

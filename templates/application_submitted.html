@@ -1,46 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    
-    <title> Application Submitted </title>
+  <head>
+    <title>Application Submitted</title>
     {% include 'bootstrap.html' %}
-    
-</head>
-<body>
-    {% include 'nav.html' %}
-    <br>
-    {% include 'banner.html' %}
+  </head>
+  <body>
+    {% include 'nav.html' %} {% include 'banner2.html' %}
 
-    <div class="container">    
+    <div class="container">
 
-        <h1 
-            class="text-center mt-3 mb-4"> 
-            Finisher Productions
-        </h1>
-        
-        <p><b> Your application for "{{job['title']}}" has been submitted! </b></p>
+      <h3 class="text-center mt-2">
+        Your application for "{{job['title']}}" has been submitted! 
+      </h3>
 
-        <b> Full Name </b>
-        <div class="mb-2"> {{application['full_name']}} </div>
+      <p class="text-center mb-0">
+        Thank you for submitting your application. <br>
+        Our team will review your details and contact you at the earliest convenience. <br> 
+        Stay tuned for further updates!
+      </p>
+      <br>
 
-        <b> Email </b>
-        <div class="mb-2"> {{application['email']}} </div>
-
-        <b> Contact No. </b>
-        <div class="mb-2"> {{application['contact_no']}} </div>
-
-        <b> Address </b>
-        <div class="mb-2"> {{application['address']}} </div>
-        
-        <b> Portfolio/Showreel Link </b>
-        <div class="mb-2"> {{application['portfolio_link']}} </div>
-
-        <b> Work Experience </b>
-        <div class="mb-2"> {{application['work_experience']}} </div>   
-
+      <div class="container">
+        <!-- First Row -->
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <b>Full Name</b>
+                <div class="mb-3">{{application['full_name']}}</div>
+            </div>
+            
+            <div class="col-md-4 text-center">
+                <b>Email</b>
+                <div class="mb-3">{{application['email']}}</div>
+            </div>
+            
+            <div class="col-md-4 text-center">
+                <b>Contact No.</b>
+                <div class="mb-3">{{application['contact_no']}}</div>
+            </div>
         </div>
+        
+        <!-- Second Row -->
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <b>Address</b>
+                <div class="mb-4">{{application['address']}}</div>
+            </div>
+            
+            <div class="col-md-4 text-center">
+                <b>Portfolio/Showreel Link</b>
+                <div class="mb-4">{{application['portfolio_link']}}</div>
+            </div>
+            
+            <div class="col-md-4 text-center">
+                <b>Work Experience</b>
+                <div class="mb-4">{{application['work_experience']}}</div>
+            </div>
+        </div>
+    </div>
     
-    {% include 'contactus.html' %}
-    {% include 'footer.html' %}
-</body>
+    <div class="text-center">
+        <h6 class="mt-5"> For more information contact us. </h6>
+        <a class="btn btn-primary btn-sm" href="mailto:Finisherproductions17@gmail.com?
+                subject=Questions%20about%20Job%20Openings&body=My%20Name%3A%20%3CYour%20Name%20Here
+                %3E%0D%0A%0D%0AMy%20Questions%3A%20%3CEnter%20Your%20Questions%3E"> Contact Us 
+        </a>
+    </div>
+
+  {% include 'footer.html' %}
+  </body>
 </html>

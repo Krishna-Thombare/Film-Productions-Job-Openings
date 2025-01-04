@@ -1,43 +1,69 @@
-<h4> Application Form </h4>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title> Application Form </title>
+    {% include 'bootstrap.html' %}
 
-    <form action="/job/{{job['id']}}/view" method="post">
-        <div class="mb-3">
-            <label> Full Name </label>
-            <br>
-            <input type="text" required name="full_name" placeholder="e.g. Krishna Thombare"> 
-        </div>
+</head>
 
-        <div class="mb-3">
-            <label> Email </label>
-            <br>
-            <input type="email" required name="email" placeholder="e.g. name@xyz.com">
-        </div>
+<body>
 
-        <div class="mb-3">
-            <label> Contact No. </label>
-            <br>
-            <input type="text" name="contact_no">
-        </div>
+    {% include 'nav.html' %}
+    {% include 'banner2.html' %}
 
-        <div class="mb-3">
-            <label> Address </label>
-            <br>
-            <textarea name="address" placeholder="e.g. City, State, Country"></textarea>
-        </div>
+    <div class="container">
 
-        <div class="mb-3">
-            <label> Portfolio/Showreel Link </label>
-            <br>
-            <input type="url" name="portfolio_link">
-        </div>    
+        <h4> Application Form </h4>
 
-        <div class="mb-3">
-            <label> Work Experience </label>
-            <br>
-            <textarea
-                name="work_experience">
-            </textarea>
-        </div>
+        <form action="/job/{{job['id']}}/apply" method="post">
+            <div class="mb-3">
+                <label> Full Name </label>
+                <br>
+                <input type="text" required name="full_name" placeholder="e.g. Krishna Thombare"> 
+            </div>
 
-        <input type="submit">
-</form>
+            <div class="mb-3">
+                <label> Email </label>
+                <br>
+                <input type="email" required name="email" placeholder="e.g. name@xyz.com">
+            </div>
+
+            <div class="mb-3">
+                <label> Contact No. </label>
+                <br>
+                <input type="text" name="contact_no">
+            </div>
+
+            <div class="mb-3">
+                <label> Address </label>
+                <br>
+                <textarea name="address" placeholder="e.g. City, State, Country"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label> Portfolio/Showreel Link </label>
+                <br>
+                <input type="url" name="portfolio_link">
+            </div>    
+
+            <div class="mb-3">
+                <label> Work Experience </label>
+                <br>
+                <textarea
+                    name="work_experience">
+                </textarea>
+            </div>
+
+            <input type="submit">
+        </form>
+
+        {% include 'contactus.html' %}
+
+    </div>
+
+{% include 'footer.html' %}
+</body>
+</html>
+
+
