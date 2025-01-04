@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <title> Application Form </title>
+    <title>Application Form</title>
     {% include 'bootstrap.html' %}
-
 </head>
 
 <body>
@@ -12,58 +10,48 @@
     {% include 'nav.html' %}
     {% include 'banner2.html' %}
 
-    <div class="container">
+    <div class="container mt-4 mb-5">
 
-        <h4> Application Form </h4>
+        <h3 class="text-center mb-4">Application Form</h3>
 
         <form action="/job/{{job['id']}}/apply" method="post">
             <div class="mb-3">
-                <label> Full Name </label>
-                <br>
-                <input type="text" required name="full_name" placeholder="e.g. Krishna Thombare"> 
+                <label for="full_name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" required name="full_name" id="full_name" placeholder="e.g. Krishna Thombare"> 
             </div>
 
             <div class="mb-3">
-                <label> Email </label>
-                <br>
-                <input type="email" required name="email" placeholder="e.g. name@xyz.com">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" required name="email" id="email" placeholder="e.g. name@xyz.com">
             </div>
 
             <div class="mb-3">
-                <label> Contact No. </label>
-                <br>
-                <input type="text" name="contact_no">
+                <label for="contact_no" class="form-label">Contact No.</label>
+                <input type="text" class="form-control" name="contact_no" id="contact_no">
             </div>
 
             <div class="mb-3">
-                <label> Address </label>
-                <br>
-                <textarea name="address" placeholder="e.g. City, State, Country"></textarea>
+                <label for="address" class="form-label">Address</label>
+                <textarea name="address" class="form-control" id="address" placeholder="e.g. City, State, Country"></textarea>
             </div>
 
             <div class="mb-3">
-                <label> Portfolio/Showreel Link </label>
-                <br>
-                <input type="url" name="portfolio_link">
-            </div>    
-
-            <div class="mb-3">
-                <label> Work Experience </label>
-                <br>
-                <textarea
-                    name="work_experience">
-                </textarea>
+                <label for="portfolio_link" class="form-label">Portfolio/Showreel Link</label>
+                <input type="url" name="portfolio_link" class="form-control" id="portfolio_link">
             </div>
 
-            <input type="submit">
+            <div class="mb-3">
+                <label for="work_experience" class="form-label">Work Experience</label>
+                <textarea name="work_experience" class="form-control" id="work_experience"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
         </form>
 
         {% include 'contactus.html' %}
 
     </div>
 
-{% include 'footer.html' %}
+    {% include 'footer.html' %}
 </body>
 </html>
-
-
