@@ -37,20 +37,19 @@
         lasting impact.
       </p>
 
-      <table style="margin: 0 auto; border-spacing: 10px;">
-        <tr>
-          <td>
-            <img src="/static/image2.jpeg" style="height: 320px; border-radius: 4px;" alt="image">
-          </td>
-          <td>
-            <img src="/static/image1.jpeg" style="height: 320px; border-radius: 4px;" alt="image">
-          </td>
-        </tr>
-      </table>
+      <div style="display: flex; justify-content: space-around; gap: 12px; margin: 0 auto; flex-wrap: wrap;">
+        <img src="/static/image2.jpeg" 
+             style="height: auto; width: 100%; max-width: 350px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" 
+             alt="Image 2">
+        <img src="/static/image4.jpeg" 
+             style="height: auto; width: 100%; max-width: 350px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" 
+             alt="Image 4">
+        <img src="/static/image1.jpeg" 
+             style="height: auto; width: 100%; max-width: 350px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" 
+             alt="Image 1">
+      </div>
+           
       
-      
-      
-
       {% include 'contactus.html' %}
     </div>
     
