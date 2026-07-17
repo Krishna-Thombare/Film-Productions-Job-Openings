@@ -5,7 +5,7 @@ Film Productions is a web application designed to help users discover and explor
 1. Browse job openings.
 2. View detailed job descriptions.
 3. Submit application form.
-4. Get latest update by signing up.
+4. Get latest updates by signing up.
 
 ## 🛠️ **Tech Stack:**
 1. Backend:- Python, Flask
