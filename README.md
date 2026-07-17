@@ -9,13 +9,13 @@ Film Productions is a web application designed to help users discover and explor
 
 ## 🛠️ **Tech Stack:**
 1. Backend:- Python, Flask
-2. Database:- MySQL (Aiven Cloud)
+2. Database:- SQLAlchemy (ORM), MySQL (hosted on Aiven Cloud)
 3. Frontend:- HTML, CSS, Bootstrap
 4. Deployment:- Render
 
 ## 🧠 **Architecture:**
 1. RESTful routing for handling requests.
-2. SQLAlchemy ORM for database operations.
+2. SQLAlchemy for database operations.
 3. Used Jinja2 for template rendering.
 4. Clear separation between backend and frontend logic.
 
