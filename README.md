@@ -16,7 +16,7 @@ Film Productions is a web application designed to help users discover and explor
 ## 🧠 **Architecture:**
 1. RESTful routing for handling requests.
 2. SQLAlchemy for database operations.
-3. Used Jinja2 for template rendering.
+3. Jinja2 for template rendering.
 4. Clear separation between backend and frontend logic.
 
 ## 🚀 **Live Demo:**
