@@ -20,7 +20,7 @@ Film Productions is a web application designed to help users discover and explor
 4. Clear separation between backend and frontend logic.
 
 ## 🚀 **Live Demo:**
-https://film-productions.onrender.com/
+https://film-productions.onrender.com
 
 ## 📸 **Screenshots:**
 ### 🏠 Home Page
